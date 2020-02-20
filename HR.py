@@ -199,4 +199,4 @@ class HR_Data_Prep_Utility(object):
 		"""
 		scaler = StandardScaler()
 		scaler.fit(X)
-		return pd.DataFrame(scaler.transform(X))
+		return pd.DataFrame(scaler.transform(X), columns=X.columns)
