@@ -181,8 +181,8 @@ class HR_Data_Prep_Utility(object):
 				X = self._fe_category_one_hot_encoder(X, column)
 		for column in cat_columns_fh:
 			if column in X.columns:
-				#X = self._fe_category_feature_hashing(X, column, int(len(X[column].unique())*reduction_ratio))
-				X = self._fe_category_one_hot_encoder(X, column)
+				X = self._fe_category_feature_hashing(X, column, int(len(X[column].unique())*reduction_ratio))
+				#X = self._fe_category_one_hot_encoder(X, column)
 		drop_encoded_fe = []
 		for column in cat_columns_oh + cat_columns_fh:
 			if column in X.columns:
